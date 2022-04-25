@@ -19,5 +19,6 @@ export const mailSender = async (
     console.log("Message sent: %s", info.messageId);
   } catch (err) {
     console.log(err.message);
+    throw new Error(err);
   }
 };
